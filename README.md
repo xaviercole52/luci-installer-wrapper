@@ -1,27 +1,19 @@
-
----
-
-### 3. `luci-installer-wrapper` — README
-
-```markdown
 # Luci Installer Wrapper
 
-Simple cross-platform wrapper scripts for downloading and launching the Luci installer.
+Cross-platform wrapper scripts for downloading and launching the Luci installer.
 
-These scripts are **thin wrappers only** and do not contain any internal Luci logic, architecture, or proprietary code.
-
----
-
-## Files
-
-- `install.sh` — Linux/macOS shell installer wrapper
-- `install.ps1` — Windows PowerShell installer wrapper
-- `README.md` — This file
+These scripts contain no internal logic and are safe for public use.
 
 ---
 
-## Usage (Linux/macOS)
+## Windows
 
-```bash
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process -Force
+.\install.ps1
+
+
+## Linux/macOS
+
 chmod +x install.sh
 ./install.sh

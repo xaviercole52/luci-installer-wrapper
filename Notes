@@ -1,45 +1,11 @@
 
 ---
 
-### 4. `luci-showcase` — README
+# 📄 **FILE: luci-installer-wrapper/install.ps1**
 
-```markdown
-# Luci Showcase
+```powershell
+Write-Host "Downloading Luci installer..."
+Invoke-WebRequest -Uri "http://localhost:8000/download/installer.exe" -OutFile "luci_installer.exe"
 
-Public showcase of the Luci platform by Cognitive Intelligence Labs LLC.
-
-This repository contains **non-sensitive** materials that demonstrate Luci’s capabilities, design, and ecosystem without exposing internal architecture or proprietary code.
-
----
-
-## Contents
-
-- `screenshots/` — UI and experience captures
-- `videos/` — Short demo clips (or links)
-- `features.md` — Feature overview
-- `roadmap.md` — High-level roadmap
-- `about.md` — Vision and positioning
-
----
-
-## Example Positioning
-
-Luci is a sovereign-first, cloud-optional synthetic intelligence platform with:
-
-- A sovereign OS for offline, local-first intelligence
-- A cloud OS for scalable, multi-user deployments
-- Multi-agent cognitive systems
-- Emotional and mission engines
-- A commercial licensing and deployment stack
-
----
-
-## Purpose
-
-This repository exists to:
-
-- Give people a clear picture of what Luci is
-- Provide visual and written material for sharing
-- Support conversations with users, partners, and employers
-
-No proprietary code or internal architecture is included here.
+Write-Host "Launching installer..."
+Start-Process ".\luci_installer.exe"
